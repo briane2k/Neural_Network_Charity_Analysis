@@ -38,10 +38,10 @@ No the Model did not perform as desired, loss was .92 and accuracy was .70
 #### _What steps did you take to try and increase model performance?_
 * For a first attempt I changed a hidden layers activation function to tanh, this performed even worse so was rolled-back.
 * A second attempt was made, where I removed a column "SPECIAL_CONSIDERATIONS".  This seems to be a veiled decision data that could be confusing the NN.  Accuracy saw a return to fair levels, and loss was reduced from 0.925 to 0.6094, showing progress.
-* A third attempt included adding additional hidden layers, and additional neurons to layers. Input went from 43 to 41 (dropping the SPECIAL_CONSIDERATIONS column was persisted), 1st,2nd, and 3rd layers had 123, 82, and 12 neurons respectively. This performed worse, with the model loss at 0.6981 and accuracy 0.5237
+* A third attempt included adding additional hidden layers, and additional neurons to layers. Input went from 43 to 41 (dropping the SPECIAL_CONSIDERATIONS column was persisted), 1st, 2nd, and 3rd layers had 123, 82, and 12 neurons respectively. This performed worse, with the model loss at 0.6981 and accuracy 0.5237
 
 ---
 # Summary
-## Removing the noisy column "SPECIAL_CONSIDERATIONS" was the most beneficial. Adding additional layers and neurons did not any desired positive effect. 
+## Removing the noisy column "SPECIAL_CONSIDERATIONS" was the most beneficial. Adding additional layers and neurons did not have any desired positive effect. 
 ## I think further gains could be made by taking the column "INCOME_AMT" and instead of encoding it, just replacing it with custom bins. This could also be done to ASK_AMT.  This would provide continuous data in the set, which might train the model better.
 ## Another method could be tried as an alternative to using Neural Networks; we could use a supervised learning method such as Random Forest. This might perform better, just assuming a NN performs best is shortsighted.
